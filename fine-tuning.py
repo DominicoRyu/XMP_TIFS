@@ -170,6 +170,28 @@ def evaluate_model(model, criterion, val_loader):
     accuracy = 100 * correct / len(val_loader.dataset)
     return val_loss, accuracy
 
+def automatic_weight_mapping(old_state_dict, new_state_dict):
+    mapping_dict = {}
+    new_keys = list(new_state_dict.keys())
+    
+    for old_key in old_state_dict.keys():
+        old_name_parts = old_key.split('.')
+        best_match = None
+        best_match_score = float('inf')
+        
+        for new_key in new_keys:
+            new_name_parts = new_key.split('.')
+            if len(old_name_parts) == len(new_name_parts):
+                match_score = sum(o != n for o, n in zip(old_name_parts, new_name_parts))
+                if match_score < best_match_score:
+                    best_match_score = match_score
+                    best_match = new_key
+        
+        if best_match is not None:
+            mapping_dict[best_match] = old_state_dict[old_key]
+            new_keys.remove(best_match)
+            
+    return mapping_dict
 
 # Load datasets
 train_path = basic_path + 'train.npz'
@@ -198,6 +220,7 @@ else:
         model_weight = torch.load('./XMP_best_4k/4k_scen1_v2.pth')
 
 model_state_dict = model_weight.state_dict()
+model_state_dict = {k: v for k, v in model_state_dict.items() if 'mlp_head' not in k}
 
 model = XMP(
     seq_len = seq_size,
@@ -212,8 +235,10 @@ model = XMP(
     lg_token_size = large_token_size,
     ).to(device)
 
-model_state_dict = {k: v for k, v in model_state_dict.items() if 'mlp_head' not in k}
-model.load_state_dict(model_state_dict, strict=False)
+new_state_dict = model.state_dict()
+mapping_dict = automatic_weight_mapping(model_state_dict, new_state_dict)
+
+model.load_state_dict(mapping_dict, strict=False)
 nn.init.trunc_normal_(model.sm_mlp_head[1].weight, std=0.01)
 nn.init.trunc_normal_(model.lg_mlp_head[1].weight, std=0.01)
 
