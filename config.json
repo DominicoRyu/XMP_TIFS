@@ -1,0 +1,45 @@
+{
+  "training_scenario": 1,
+  "data_size": "512",
+  "checkpoint_name": "XMP",
+  "gpu_id": 0,
+  "num_class_list": [75, 11, 25, 5, 2, 2],
+
+  "value_embedding": 512,
+  "multi_scale_Performer_depth": 2,
+  "small_cnn_kernel_size": 27,
+  "small_token_dimension": 256,
+  "small_token_size": 16,
+  "large_cnn_kernel_size": 35,
+  "large_token_dimension": 512,
+  "large_token_size": 32,
+  "total_epochs": 1,
+  "first_lr": 0.001,
+  "dataset_batch_size": 128,
+  "early_stopping": 11,
+
+  "mode": "org",
+  "noise": "True",
+  
+  "wandb_project": "Fine-tuning",
+  "wandb_name": "XMP+GBFlip 512",
+  
+  "config_small": {
+      "mode": "org",
+      "ffn_adapter_layernorm_option": "none",
+      "ffn_adapter_scalar": "learnable_scalar",
+      "ffn_num": 64,
+      "d_model": 128,
+      "vpt_num": 8,
+      "freeze": "True"
+    },
+  "config_large": {
+      "mode": "org",
+      "ffn_adapter_layernorm_option": "none",
+      "ffn_adapter_scalar": "learnable_scalar",
+      "ffn_num": 64,
+      "d_model": 512,
+      "vpt_num": 8,
+      "freeze": "True"
+    }
+}
