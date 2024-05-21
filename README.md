@@ -46,7 +46,10 @@ Example command:
 python train.py -scen 1 -size 512 -name XMP_scen1_512 -gpu 0 -emb_dim 128 -depth 3 -sm_cnn_size 11 -sm_dim 256 -sm_token_size 4 -lg_cnn_size 11 -lg_dim 512 -lg_token_size 16
 ````
 
-
+XMP weight (512_scen1)
+https://drive.google.com/file/d/1g57bD2vXk5Lnv_rZFH5do8_4hr4dc4Wj/view?usp=drive_link
+XMP weight (4k_scen1)
+https://drive.google.com/file/d/1OKIzzs66zXNJgFvREz5mbQP-OU9FkYC7/view?usp=drive_link
 
 ## Citation
 ````
