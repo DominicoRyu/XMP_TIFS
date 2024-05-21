@@ -187,16 +187,16 @@ val_loader = DataLoader(val_data, shuffle=False, batch_size=batch_size)
 #Finetuning
 if data_size == "512":
     if noise == "True":
-        model_weight = torch.load('./XMP_best_512/512_scen1_noise_v2.pth')
+        model_weight = torch.load('./NoiseXMP_scen1_512.pth')
     else:  
-        model_weight = torch.load('./XMP_best_512/512_scen1_v2.pth')
+        model_weight = torch.load('./XMP_scen1_512.pth')
 else:
     if noise == "True":
-        model_weight = torch.load('./XMP_best_4k/4k_scen1_noise_v1.pth')
+        model_weight = torch.load('./NoiseXMP_scen1_4k.pth')
     else:
-        model_weight = torch.load('./XMP_best_4k/4k_scen1_v2.pth')
+        model_weight = torch.load('./XMP_scen1_4k.pth')
 
-model_state_dict = model_weight.state_dict()
+model_state_dict = model_weight['model_state_dict']
 model_state_dict = {k: v for k, v in model_state_dict.items() if 'mlp_head' not in k}
 
 model = XMP(

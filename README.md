@@ -48,10 +48,13 @@ Example command:
 python train.py 
 ````
 
-[XMP weight (512_scen1)]: https://drive.google.com/file/d/1g57bD2vXk5Lnv_rZFH5do8_4hr4dc4Wj/view?usp=drive_link
+[XMP weight (512_scen1)](https://drive.google.com/file/d/1pEuiTjLMWueNjK2sr0VdZK9hteYBK83Z/view?usp=drive_link)
 
-[XMP weight (4k_scen1)]: https://drive.google.com/file/d/1OKIzzs66zXNJgFvREz5mbQP-OU9FkYC7/view?usp=drive_link
+[XMP weight (4k_scen1)](https://drive.google.com/file/d/1gVfZ7Y2zi7ywHpTJMibystvYPAeTWx8f/view?usp=drive_link)
 
+[XMP+GBFlip weight (512_scen1)](https://drive.google.com/file/d/1h_BeEQfPjSPC6kv9S7x749nRPlrNhXbg/view?usp=drive_link)
+
+[XMP+GBFlip weight (4k_scen1)](https://drive.google.com/file/d/1dntU9YbGi0Sn4DtDOnMsWrsyl5fxIgS1/view?usp=drive_link)
 ## Citation
 ````
 @inproceedings{park2024xmp,
