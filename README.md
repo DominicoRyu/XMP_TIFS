@@ -1,6 +1,6 @@
 # A Cross-Attention Multi-Scale Performer with Gaussian Bit-Flips for File Fragment Classification
 
-Journal Extension version of [XMP: A CROSS-ATTENTION MULTI-SCALE PERFORMER FOR FILE FRAGMENT CLASSIFICATION](https://ieeexplore.ieee.org/abstract/document/10447626?casa_token=fJRE5tpvjKwAAAAA:66uZKJffkVsswFwzmB6UEA0GSd4cWcFXlzHRT5GQ_iUnZYB8hlrPNWUzwUqUEEw17Js-queQoTo) accepted in ICASSP 2024.
+\[Under Review\]
 
 Authors: Jeong Gyu Park*, Sisung Liu*, Hyeongsik Kim, Je Hyeong Hong 
 (* means co-first authors)
@@ -70,4 +70,5 @@ python train.py
 A patent application for XMP has been submitted and is under review for registration. XMP is licensed under the CC-BY-NC-SA-4.0 license limiting any commercial use.
 
 ## Acknowledgement
-This work was supported by the Korea Research Institute for defense Technology planning and advancement (KRIT) grant funded by the Korea government (DAPA (Defense Acquisition Program Administration)) (No. KRIT-CT-22-021, Space Signal Intelligence Research Laboratory, 2022).
+Our code is based on [performer](https://github.com/lucidrains/performer-pytorch) repository. We thank the authors for releasing their code. 
+> This work was supported by the Korea Research Institute for defense Technology planning and advancement (KRIT) grant funded by the Korea government (DAPA (Defense Acquisition Program Administration)) (No. KRIT-CT-22-021, Space Signal Intelligence Research Laboratory, 2022).
