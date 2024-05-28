@@ -20,7 +20,7 @@ File fragment classification is a crucial task in digital forensics and cybersec
 
 - ablation study of components proposed as part of XMP demonstrating the usefulness of each module,
 
-- and extensive ablation studies on different augmentation strategies and fine-tuning techniques, demonstrating the significant impact of these methods on model performance and robustness.
+- and extensive experiments on different augmentation strategies and fine-tuning techniques, demonstrating the significant impact of these methods on model performance and robustness.
 
 ## Prerequisites:
 ````
