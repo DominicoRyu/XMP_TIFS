@@ -56,7 +56,7 @@ For fine-tuning, we provide pretrained models for the XMP and XMP+GBFlip archite
 - Full fine-tuning or linear probing: Set mode to org
 - VPT: Set mode to vpt
 - AdaptFormer: Set mode to adapt
-- 
+
 Ensure you adjust other hyperparameters in config.json based on your specific use case and dataset requirements.
 
 Example command:
