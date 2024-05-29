@@ -50,7 +50,7 @@ Example command:
 python fine-tuning.py 
 ````
 
-### ### How to Fine-tune
+### How to Fine-tune
 For fine-tuning, we provide pretrained models for the XMP and XMP+GBFlip architectures on the FFT75 scenario 1. You can access these pretrained files from our repository. 
 
 - Full fine-tuning or linear probing: Set mode to org
