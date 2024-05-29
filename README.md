@@ -40,13 +40,28 @@ This code has been tested with Ubuntu 20.04, A6000 GPUs with CUDA 12.2, Python 3
 Earlier versions may also work~ :)
 
 ## 🏃 How to run our code!
-To run our code, use the following command template, adjusting the hyperparameters as needed based on the scenario and dataset size. We have conducted extensive hyperparameter tuning for different scenarios and dataset sizes to ensure optimal performance. The details of these configurations are documented in the table.
+### How to Train
+To run our code, use the following command template, adjusting the hyperparameters as needed based on the scenario and dataset size. We have conducted extensive hyperparameter tuning for different scenarios and dataset sizes to ensure optimal performance. The details of these configurations are documented in the table. Use these values to modify the config.json file accordingly.
 
 ![image](./images/XMP_parameter.png)
 
 Example command:
 ````
-python train.py 
+python fine-tuning.py 
+````
+
+### ### How to Fine-tune
+For fine-tuning, we provide pretrained models for the XMP and XMP+GBFlip architectures on the FFT75 scenario 1. You can access these pretrained files from our repository. 
+
+- Full fine-tuning or linear probing: Set mode to org
+- VPT: Set mode to vpt
+- AdaptFormer: Set mode to adapt
+- 
+Ensure you adjust other hyperparameters in config.json based on your specific use case and dataset requirements.
+
+Example command:
+````
+python fine-tuning.py 
 ````
 
 [XMP weight (512_scen1)](https://drive.google.com/file/d/1pEuiTjLMWueNjK2sr0VdZK9hteYBK83Z/view?usp=drive_link)
@@ -56,6 +71,7 @@ python train.py
 [XMP+GBFlip weight (512_scen1)](https://drive.google.com/file/d/1h_BeEQfPjSPC6kv9S7x749nRPlrNhXbg/view?usp=drive_link)
 
 [XMP+GBFlip weight (4k_scen1)](https://drive.google.com/file/d/1dntU9YbGi0Sn4DtDOnMsWrsyl5fxIgS1/view?usp=drive_link)
+
 ## Citation
 ````
 @inproceedings{park2024xmp,
