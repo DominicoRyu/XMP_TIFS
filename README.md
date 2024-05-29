@@ -4,23 +4,10 @@ Authors: _Jeong Gyu Park*, Sisung Liu*, Hyeongsik Kim, Je Hyeong Hong _
 
 \[Under Review\]
 
-
-
 ## Abstract
 File fragment classification is a crucial task in digital forensics and cybersecurity, and has recently achieved significant improvement through the deployment of convolutional neural networks (CNNs) compared to traditional handcrafted feature-based methods. However, CNN-based models exhibit inherent biases that can limit their effectiveness for larger datasets. To address this limitation, we propose the Cross-Attention Multi-Scale Performer (XMP) model, which integrates the attention mechanisms of transformer encoders with the feature extraction capabilities of CNNs. Compared to our conference work, we additionally introduce a novel Gaussian Bit-Flip (GBFlip) method for binary data augmentation, largely inspired by simulating real-world bit flipping errors, improving the model performance. Furthermore, we incorporate a fine-tuning approach and demonstrate XMP adapts more effectively to diverse datasets than other CNN-based competitors without extensive hyperparameter tuning. Our experimental results on two public file fragment classification datasets show XMP surpassing other CNN-based and RCNN-based models, achieving state-of-the-art performance in file fragment classification both with and without fine-tuning.
 
 ![image](./images/XMP_architecture.png)
-
-## Contribution
-- the **first proper Transformer encoder-based architecture** for file fragment classification with aims to reduce inductive bias and benefit from abundant training data,
-
-- a novel, efficient bit-level augmentation method called Gaussian Bit-Flip (GBFlip), pioneering in advancing classification accuracy and robustness,
-  
-- the first attempt at fine-tuning models for FFC, with the XMP technique not only showing the largest performance improvement compared to other models but also achieving SOTA performance across various scenarios and domains,
-
-- ablation study of components proposed as part of XMP demonstrating the usefulness of each module,
-
-- and extensive experiments on different augmentation strategies and fine-tuning techniques, demonstrating the significant impact of these methods on model performance and robustness.
 
 ## Prerequisites:
 ````
