@@ -47,7 +47,7 @@ To run our code, use the following command template, adjusting the hyperparamete
 
 Example command:
 ````
-python fine-tuning.py 
+python train.py 
 ````
 
 ### How to Fine-tune
