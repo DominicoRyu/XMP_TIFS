@@ -1,5 +1,5 @@
 # A Cross-Attention Multi-Scale Performer with Gaussian Bit-Flips for File Fragment Classification
-Authors: _Jeong Gyu Park*, Sisung Liu*, Hyeongsik Kim, Je Hyeong Hong _
+Authors: Sisung Liu*, Jeong Gyu Park*, Hyeongsik Kim, Je Hyeong Hong
 ( * : joint first authors)
 
 \[Under Review\]
